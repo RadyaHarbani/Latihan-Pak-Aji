@@ -44,7 +44,8 @@ class LoginPageView extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        controller.loginUser();
+                        controller.loginUser(controller.cEmail!.text,
+                            controller.cPass!.text);
                         print(controller.isLoading.value);
                       },
                       child: Text("Login"),
